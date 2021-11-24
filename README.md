@@ -7,6 +7,11 @@ Counterfactuals are a valuable means for understanding decisions made by machine
 ### Software
 Download the software directly at https://aclanthology.org/2021.findings-emnlp.306, under [Software](https://aclanthology.org/attachments/2021.findings-emnlp.306.Software.zip). Details on the used hyperparameters and hyperparameter tuning are included in [Appendix A of the paper](https://aclanthology.org/2021.findings-emnlp.306.pdf).
 
+### Method
+`CounterfactualGAN` aims to find **targeted counterfactuals for explaining black-box NLP classifiers and regressors** in a model-agnostic manner. It assumes (1) access to the _training set_ a black-box was trained on (or a similar sufficiently large domain-specific dataset) and (2) the ability to _query_ the predictive function of the black-box. Generator `G`, discriminator `D`, encoder `Enc` and decoder `Dec` are trained in a two-phase process:
+
+<img src="counterfactualgan.png" alt="drawing" style="width: 70%; max-width: 700px; !important"/>
+
 ### Datasets
 CounterfactualGAN is compared against three baseline methods on three datasets (accessible through `dataset.py`):
 
